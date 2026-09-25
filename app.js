@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const connection = require('./db');
+const router = express.Router();
 
 const app = express();
 const port = 8888;
@@ -16,6 +17,8 @@ app.get("/", (req, res) => {
     res.send("mensaje");
 } );
 
+// Se incluyen las rutas que se van creando para todas las tablas
+app.use('/api', require("./src/routes/canchaRoute"));
 
 // Prueba de la conexión a la base de datos
 app.get("/tenis_local", async(req, res) => {
