@@ -54,6 +54,7 @@ exports.update = async (req, res) => {
     }
 };
 
+// *DESTROY* llama a la función "Delete" para eliminar un registro de la base de datos
 exports.destroy = async (req, res) => {
     try {
         const { id } = req.params;

@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 
 // Se incluyen las rutas que se van creando para todas las tablas
 app.use('/api', require("./src/routes/canchaRoute"));
+app.use('/api', require('./src/routes/usuarioRoute'));
 
 // Prueba de la conexión a la base de datos
 app.get("/tenis_local", async(req, res) => {
